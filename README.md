@@ -8,6 +8,7 @@ This is the offical website of the YouTube creator [AquaWarden](https://www.yout
 I host livestreams about once a month. My next livestream will be in July (exact date TBD). You can join the Minecraft servers I host my livestreams on!
 
 ## Videos
+
 I publish full length videos about once a month and publish YouTube shorts once or twice a week.
 
 ![AquaWardens Dweller video](images/dwellervideo.png)
@@ -16,12 +17,31 @@ I publish full length videos about once a month and publish YouTube shorts once 
 
 In the future, I will also host servers that you can join to appear in my videos.
 
-## News:
+## Content
 
-I have not been uploading that much on my YouTube channel for a month, but thankfuly I am returning!
+### Latest full length videos:
+
+![backroomsfoundfootagevideo](images/backroomsfoundfootagevideo.png)
+
+Minecraft Backrooms | Found footage number 1
+
+[Click here](https://www.youtube.com/watch?v=6VYD0drAip8) to watch!
+
+![AquaWardens Dweller video](images/dwellervideo.png)
+
+Minecraft Dwellers 2.0 Add-On | @Aquawarden
+
+[Click here](https://www.youtube.com/watch?v=t8JhBf3apcg) to watch!
+
+### Latest live stream:
+
+(TBD)
+
+`Subscribe!`
 
 
-**Remember to subscribe to my [YouTube channel](https://www.youtube.com/channel/UCIKujGJttn8v4-E5LQ7L6Cw)!**
+
+
 
 
 
