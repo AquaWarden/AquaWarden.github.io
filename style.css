@@ -1,0 +1,441 @@
+/* ==========================================================================
+   1. DARK PALETTE VARIABLES & BASE STYLES
+   ========================================================================== */
+:root {
+    --bg-dark: #07090e;
+    --bg-card: #0f131d;
+    --bg-accent: #161c2b;
+    --text-main: #e2e8f0;
+    --text-sub: #8b9bb4;
+    --aqua-glow: #00f5d4;
+    --aqua-dark: #0077b6;
+    --border-color: #1e293b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   2. HEADER & NAVIGATION
+   ========================================================================== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: rgba(7, 9, 14, 0.95);
+    border-bottom: 2px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1rem;
+    color: var(--aqua-glow);
+    text-shadow: 0 0 10px rgba(0, 245, 212, 0.5);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: var(--aqua-glow);
+}
+
+/* ==========================================================================
+   3. HERO BANNER
+   ========================================================================== */
+.hero {
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: radial-gradient(circle at center, #111a2e 0%, var(--bg-dark) 80%);
+    border-bottom: 1px solid var(--border-color);
+    padding: 0 20px;
+}
+
+.badge {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.6rem;
+    color: var(--aqua-glow);
+    background: rgba(0, 245, 212, 0.1);
+    padding: 8px 12px;
+    border: 1px solid var(--aqua-glow);
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2.8rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 0px #000, 0 0 20px rgba(0, 245, 212, 0.4);
+}
+
+.hero p {
+    font-size: 1.4rem;
+    color: var(--text-sub);
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* ==========================================================================
+   4. BUTTONS & GENERAL LAYOUT
+   ========================================================================== */
+.btn {
+    padding: 12px 28px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--aqua-glow);
+    color: #000;
+    box-shadow: 0 0 15px rgba(0, 245, 212, 0.4);
+}
+
+.btn-primary:hover {
+    background-color: #fff;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--text-main);
+    border: 2px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+    border-color: var(--aqua-glow);
+    color: var(--aqua-glow);
+}
+
+.content-section {
+    padding: 80px 8%;
+}
+
+.alt-bg {
+    background-color: var(--bg-card);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+h2 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.4rem;
+    color: var(--aqua-glow);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* ==========================================================================
+   5. VIDEO CARDS & THUMBNAILS
+   ========================================================================== */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.video-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.video-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s, border-color 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.thumbnail-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background-color: var(--bg-accent);
+}
+
+.thumbnail-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.play-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(7, 9, 14, 0.6);
+    color: var(--aqua-glow);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.video-card:hover .thumbnail-img {
+    transform: scale(1.05);
+}
+
+.video-card:hover .play-overlay {
+    opacity: 1;
+}
+
+.video-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--aqua-glow);
+}
+
+.card-info {
+    padding: 20px;
+}
+
+.tag {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: var(--aqua-glow);
+    text-transform: uppercase;
+}
+
+.card-info h3 {
+    font-size: 1.3rem;
+    margin: 8px 0;
+    color: #fff;
+}
+
+.card-info p {
+    color: var(--text-sub);
+    font-size: 1rem;
+}
+
+/* ==========================================================================
+   6. BLOG FEED & EXPANDABLE ARTICLES (blog.html)
+   ========================================================================== */
+.blog-hero {
+    padding: 60px 8% 40px 8%;
+    text-align: center;
+    background: radial-gradient(circle at center, #111a2e 0%, var(--bg-dark) 80%);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.blog-hero h1 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2.2rem;
+    margin: 15px 0;
+    color: #fff;
+}
+
+.blog-hero p {
+    color: var(--text-sub);
+    font-size: 1.2rem;
+}
+
+.blog-feed {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.blog-post-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 30px;
+    transition: border-color 0.3s ease;
+}
+
+.blog-post-card:hover {
+    border-color: var(--aqua-glow);
+}
+
+.blog-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.blog-date {
+    font-size: 0.85rem;
+    color: var(--text-sub);
+    font-weight: bold;
+}
+
+.blog-post-card h2 {
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin: 10px 0 15px 0;
+    text-align: left;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.blog-preview {
+    color: var(--text-main);
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Inline Expansion Styles */
+.expandable-content {
+    margin-top: 15px;
+}
+
+.expandable-content summary {
+    list-style: none;
+    cursor: pointer;
+}
+
+.expandable-content summary::-webkit-details-marker {
+    display: none;
+}
+
+.read-more-btn {
+    display: inline-block;
+    color: var(--aqua-glow);
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 6px 14px;
+    background: rgba(0, 245, 212, 0.08);
+    border: 1px solid var(--aqua-glow);
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    user-select: none;
+}
+
+.read-more-btn:hover {
+    background: var(--aqua-glow);
+    color: #000;
+}
+
+.less-text {
+    display: none;
+}
+
+.expandable-content[open] .more-text {
+    display: none;
+}
+
+.expandable-content[open] .less-text {
+    display: inline;
+}
+
+.expanded-text {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px dashed var(--border-color);
+    color: var(--text-sub);
+    line-height: 1.7;
+}
+
+.expanded-text p {
+    margin-bottom: 12px;
+}
+
+.expanded-text ul {
+    margin: 10px 0 15px 25px;
+    color: var(--text-main);
+}
+
+/* ==========================================================================
+   7. ABOUT, COMMUNITY & FOOTER
+   ========================================================================== */
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.server-box {
+    text-align: center;
+    background: var(--bg-card);
+    padding: 40px;
+    border: 2px dashed var(--aqua-glow);
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+footer {
+    padding: 40px;
+    text-align: center;
+    background-color: var(--bg-dark);
+    border-top: 1px solid var(--border-color);
+}
+
+.social-links {
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    color: var(--text-sub);
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--aqua-glow);
+}
+
+.copyright {
+    color: #4a5568;
+    font-size: 0.9rem;
+}
