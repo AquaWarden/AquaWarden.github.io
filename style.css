@@ -159,6 +159,10 @@ nav ul li a.active {
     padding: 80px 8%;
 }
 
+.projects-section {
+    padding: 80px 8%;
+}
+
 .alt-bg {
     background-color: var(--bg-card);
     border-top: 1px solid var(--border-color);
@@ -177,6 +181,12 @@ h2 {
    5. VIDEO CARDS & THUMBNAILS
    ========================================================================== */
 .video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
